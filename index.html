@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Romero's Limousine | Limo & Car Service in Redwood City, CA</title>
+<meta name="description" content="Chauffeured limousine, SUV and sedan service in Redwood City, CA. Airport transfers to SFO, SJC and OAK, weddings, wine tours and corporate travel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#14171f; --night-2:#1c202b; --gold:#c9a55c; --gold-dim:#a88a47;
+  --ivory:#f3eee4; --mist:#b9b6ae; --line:rgba(201,165,92,.28);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ivory);font:400 1rem/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:.6rem}
+section{padding:5rem 0}
+.lead{color:var(--mist);max-width:56ch;margin-bottom:2.5rem}
+.btn{display:inline-block;background:var(--gold);color:var(--night);font-weight:700;padding:.85rem 1.5rem;border-radius:2px;text-decoration:none;border:0;cursor:pointer;font:700 1rem var(--sans)}
+.btn:hover{background:var(--ivory)}
+.btn.ghost{background:none;color:var(--ivory);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+header{position:sticky;top:0;z-index:10;background:rgba(20,23,31,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+.logo{font-family:var(--serif);font-size:1.6rem;font-weight:700;text-decoration:none;color:var(--gold)}
+nav{display:flex;gap:1.6rem;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mist)}
+nav a:hover{color:var(--ivory)}
+.head-cta{display:flex;align-items:center;gap:1rem}
+.head-cta .tel{font-weight:700;text-decoration:none}
+
+.hero{padding:4.5rem 0 5rem;background:radial-gradient(900px 400px at 85% 0,rgba(201,165,92,.12),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-bottom:1.1rem}
+.hero p{color:var(--mist);max-width:44ch;margin-bottom:1.8rem}
+.trust{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.8rem;font-size:.9rem;color:var(--mist)}
+
+.ticket{background:var(--ivory);color:var(--night);border-radius:4px;padding:1.6rem;position:relative}
+.ticket::before,.ticket::after{content:"";position:absolute;top:96px;width:22px;height:22px;border-radius:50%;background:var(--night)}
+.ticket::before{left:-11px}.ticket::after{right:-11px}
+.ticket h2{font-size:1.7rem;margin:0 0 1.4rem;padding-bottom:1.4rem;border-bottom:2px dashed #c9c2b2}
+.field{margin-bottom:.9rem}
+.field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:.25rem;color:#4a4739}
+.field select,.field input,.field textarea{width:100%;padding:.65rem .75rem;border:1px solid #c9c2b2;border-radius:2px;background:#fff;font:400 1rem var(--sans);color:var(--night)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.check{display:flex;gap:.5rem;align-items:center;font-size:.9rem;margin-bottom:1rem}
+.check input{width:auto}
+.price{display:flex;justify-content:space-between;align-items:baseline;border-top:2px dashed #c9c2b2;padding-top:1rem;margin-top:.4rem}
+.price strong{font:700 2.4rem var(--serif)}
+.note{font-size:.8rem;color:#6b6759;margin:.3rem 0 1rem}
+.ticket .btn{width:100%;background:var(--night);color:var(--ivory)}
+.ticket .btn:hover{background:var(--gold-dim)}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.services div{padding:1.8rem;border:1px solid var(--line);margin:-1px 0 0 -1px}
+.services h3{font-size:1.5rem;color:var(--gold);margin-bottom:.4rem}
+.services p{color:var(--mist);font-size:.95rem}
+
+.alt{background:var(--night-2)}
+.fleet{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.car{background:var(--night);border-top:3px solid var(--gold);padding:1.5rem}
+.car .photo{aspect-ratio:16/10;background:linear-gradient(135deg,#252a38,#191c26);display:grid;place-items:center;color:var(--mist);font-size:.8rem;margin-bottom:1rem}
+.car h3{font-size:1.4rem}
+.car .cap{color:var(--gold);font-size:.9rem;margin:.2rem 0 .8rem}
+.car dl{display:grid;grid-template-columns:1fr auto;gap:.3rem;font-size:.9rem;color:var(--mist)}
+.car dd{margin:0;color:var(--ivory);font-weight:700;text-align:right}
+.rules{margin-top:2rem;color:var(--mist);font-size:.9rem;display:grid;gap:.3rem}
+
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+blockquote{border-left:2px solid var(--gold);padding-left:1.2rem;font-family:var(--serif);font-size:1.3rem;line-height:1.4}
+blockquote cite{display:block;margin-top:.8rem;font:400 .85rem var(--sans);color:var(--mist);font-style:normal}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact p{margin-bottom:.5rem;color:var(--mist)}
+.contact strong{color:var(--ivory)}
+.bigtel{font:700 2.4rem var(--serif);color:var(--gold);text-decoration:none;display:block;margin:.5rem 0 1.2rem}
+footer{border-top:1px solid var(--line);padding:1.8rem 0;color:var(--mist);font-size:.85rem}
+.wa{position:fixed;right:1rem;bottom:1rem;z-index:20;background:#25d366;color:#0b3d1d;font-weight:700;padding:.8rem 1.1rem;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+
+@media(max-width:980px){
+  .hero .wrap,.contact{grid-template-columns:1fr}
+  .fleet{grid-template-columns:1fr 1fr}
+  .services,.reviews{grid-template-columns:1fr 1fr}
+  nav{display:none}
+}
+@media(max-width:620px){
+  section{padding:3.5rem 0}
+  .fleet,.services,.reviews{grid-template-columns:1fr}
+  .head-cta .tel{display:none}
+  .row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Romero's Limousine</a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#fleet">Fleet and rates</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="head-cta">
+      <a class="tel" href="tel:+16505550100">(650) 555-0100</a>
+      <a class="btn" href="#quote">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Arrive well. Every ride, on time.</h1>
+      <p>Chauffeured limousines, SUVs and sedans in Redwood City and across the Peninsula. Know your price before you book.</p>
+      <a class="btn" href="#quote">Estimate my ride</a>
+      <div class="trust">
+        <span>Licensed and insured</span><span>Flight tracking</span><span>Professional chauffeurs</span>
+      </div>
+    </div>
+
+    <form class="ticket" id="quote" aria-labelledby="qt">
+      <h2 id="qt">Your trip</h2>
+      <div class="field">
+        <label for="service">Service</label>
+        <select id="service">
+          <option value="hourly">By the hour</option>
+          <option value="SFO">Airport: SFO</option>
+          <option value="SJC">Airport: SJC</option>
+          <option value="OAK">Airport: OAK</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="field"><label for="vehicle">Vehicle</label><select id="vehicle"></select></div>
+        <div class="field" id="hoursBox"><label for="hours">Hours</label><input id="hours" type="number" min="1" max="24" value="4"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="date">Date</label><input id="date" type="date" required></div>
+        <div class="field"><label for="time">Pickup time</label><input id="time" type="time" required></div>
+      </div>
+      <div class="field"><label for="pickup">Pickup address</label><input id="pickup" required autocomplete="street-address"></div>
+      <div class="field"><label for="drop">Destination</label><input id="drop"></div>
+      <div class="row">
+        <div class="field"><label for="name">Name</label><input id="name" required autocomplete="name"></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" required autocomplete="tel"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="night"> Pickup between 11 PM and 6 AM</label>
+      <div class="price"><span>Estimated total</span><strong id="total">$0</strong></div>
+      <p class="note" id="msg"></p>
+      <button class="btn" type="submit">Send request on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Rides for every occasion</h2>
+    <p class="lead">From a 5 AM flight to a weekend in wine country, we plan the route so you do not have to.</p>
+    <div class="services">
+      <div><h3>Airport transfers</h3><p>SFO, SJC and OAK with flight monitoring and a driver waiting when you land.</p></div>
+      <div><h3>Weddings</h3><p>Arrive together and leave in style, with timing built around your photographer.</p></div>
+      <div><h3>Wine tours</h3><p>Napa and Sonoma by the day, with a driver who knows which tastings to book.</p></div>
+      <div><h3>Corporate travel</h3><p>Executive transfers, roadshows and hourly charters with a clean invoice.</p></div>
+      <div><h3>Nights out</h3><p>Birthdays, concerts, proms and bachelor parties. Everyone gets home safely.</p></div>
+      <div><h3>Long distance</h3><p>Point to point to Sacramento, Monterey, Tahoe or anywhere in between.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fleet" class="alt">
+  <div class="wrap">
+    <h2>Fleet and rates</h2>
+    <p class="lead">Rates are starting prices and exclude gratuity. Sample rates for this demo; replace with your own.</p>
+    <div class="fleet" id="fleetGrid"></div>
+    <div class="rules">
+      <span>Monday to Thursday: 4 hour minimum. Friday to Sunday and holidays: 6 hour minimum.</span>
+      <span>Late and early pickups (11 PM to 6 AM): add $20.</span>
+      <span>Waiting time is billed at the vehicle's hourly rate after the first 15 minutes.</span>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>What riders say</h2>
+    <p class="lead">Replace these sample reviews with real ones from your Google or Yelp page.</p>
+    <!-- IMPORTANT: sample text only. Do not publish invented reviews on a live site. -->
+    <div class="reviews">
+      <blockquote>The driver was early, the car spotless, and we never worried about the flight.<cite>Sample review, airport transfer</cite></blockquote>
+      <blockquote>Our wedding party arrived on schedule and the photos came out perfectly.<cite>Sample review, wedding</cite></blockquote>
+      <blockquote>Clear price up front and no surprises at the end of the night.<cite>Sample review, night out</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap contact">
+    <div>
+      <h2>Book anytime</h2>
+      <a class="bigtel" href="tel:+16505550100">(650) 555-0100</a>
+      <a class="btn" href="https://wa.me/16505550100">Message us on WhatsApp</a>
+    </div>
+    <div>
+      <p><strong>Service area</strong><br>Redwood City, San Mateo, Palo Alto, San Francisco, San Jose and the greater Bay Area.</p>
+      <p><strong>Hours</strong><br>24 hours, 7 days a week, by reservation.</p>
+      <p><strong>Email</strong><br>reservations@romeroslimousine.com</p>
+      <p><strong>Credentials</strong><br>Add your CPUC TCP permit number and insurance details here.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr"></span> Romero's Limousine. Redwood City, CA. Demo site.</div>
+</footer>
+
+<a class="wa" href="https://wa.me/16505550100" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+<script>
+/* ===== EDIT YOUR BUSINESS DATA HERE ===== */
+const WHATSAPP = "16505550100";           // country code + number, digits only
+const NIGHT_FEE = 20;
+const FLEET = [
+  {id:"sedan",  name:"Lincoln Town Car Sedan", pax:2,  hour:75,  SFO:110, SJC:165, OAK:185},
+  {id:"suv",    name:"Cadillac Escalade SUV",  pax:6,  hour:95,  SFO:140, SJC:195, OAK:215},
+  {id:"stretch",name:"Stretch Limousine",      pax:8,  hour:130, SFO:null,SJC:null,OAK:null},
+  {id:"sprinter",name:"Mercedes Sprinter Limo",pax:12, hour:150, SFO:null,SJC:null,OAK:null}
+];
+/* ======================================== */
+
+const $ = id => document.getElementById(id);
+const money = n => "$" + Math.round(n).toLocaleString("en-US");
+
+// Fleet cards and vehicle select
+$("fleetGrid").innerHTML = FLEET.map(v => `
+  <article class="car">
+    <div class="photo">Add vehicle photo</div>
+    <h3>${v.name}</h3>
+    <p class="cap">Up to ${v.pax} passengers</p>
+    <dl>
+      <dt>Per hour</dt><dd>${money(v.hour)}</dd>
+      <dt>To or from SFO</dt><dd>${v.SFO ? money(v.SFO) : "By the hour"}</dd>
+      <dt>To or from SJC</dt><dd>${v.SJC ? money(v.SJC) : "By the hour"}</dd>
+      <dt>To or from OAK</dt><dd>${v.OAK ? money(v.OAK) : "By the hour"}</dd>
+    </dl>
+  </article>`).join("");
+$("vehicle").innerHTML = FLEET.map(v => `<option value="${v.id}">${v.name} (${v.pax} pax)</option>`).join("");
+
+// Date defaults
+const today = new Date();
+$("date").min = today.toISOString().slice(0,10);
+$("yr").textContent = today.getFullYear();
+
+function minHours(dateStr){
+  if(!dateStr) return 4;
+  const d = new Date(dateStr + "T00:00:00").getDay(); // 0 Sun ... 6 Sat
+  return (d === 0 || d >= 5) ? 6 : 4;
+}
+
+function estimate(){
+  const service = $("service").value;
+  const v = FLEET.find(x => x.id === $("vehicle").value);
+  const night = $("night").checked ? NIGHT_FEE : 0;
+  let total = 0, msg = "";
+  $("hoursBox").style.display = service === "hourly" ? "" : "none";
+
+  if(service === "hourly"){
+    const min = minHours($("date").value);
+    let h = Math.max(1, parseInt($("hours").value) || min);
+    if(h < min){ h = min; msg = `Minimum ${min} hours for this day. Total uses ${min} hours. `; }
+    total = v.hour * h + night;
+  } else if(v[service]){
+    total = v[service] + night;
+  } else {
+    total = v.hour * minHours($("date").value) + night;
+    msg = "This vehicle is booked by the hour for airport trips. ";
+  }
+  msg += "Estimate only. Gratuity and extra stops are not included.";
+  $("total").textContent = money(total);
+  $("msg").textContent = msg;
+  return {total, v, service};
+}
+["service","vehicle","hours","date","night"].forEach(id => $(id).addEventListener("input", estimate));
+estimate();
+
+// Send request through WhatsApp (works on GitHub Pages, no server needed)
+$("quote").addEventListener("submit", e => {
+  e.preventDefault();
+  const {total, v, service} = estimate();
+  const svc = service === "hourly" ? `By the hour (${$("hours").value} h)` : `Airport ${service}`;
+  const text = [
+    "New ride request - Romero's Limousine",
+    `Name: ${$("name").value}`, `Phone: ${$("phone").value}`,
+    `Service: ${svc}`, `Vehicle: ${v.name}`,
+    `Date: ${$("date").value} at ${$("time").value}`,
+    `Pickup: ${$("pickup").value}`, `Destination: ${$("drop").value || "-"}`,
+    `Estimate: ${money(total)}`
+  ].join("\n");
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+});
+</script>
+</body>
+</html>
